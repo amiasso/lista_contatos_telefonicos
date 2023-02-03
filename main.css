@@ -1,0 +1,79 @@
+* {
+    
+    font-family: 'Roboto', sans-serif; 
+}
+#listaRegistro{
+    display: none;
+}
+#cadastroRegistro{
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+
+body[page=lista] #listaRegistro {
+    display: block;
+}
+#inputPesquisa {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex 1;
+}
+body[page=cadastro] #cadastroRegistro {
+    display: flex;
+}
+body{
+    font-size: 14px;
+    background-color: #ccc;
+    color: green;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table th,
+table td{
+    font-size: 14px;
+    padding: 10px 15px;
+    border: solid 1px #ccc; 
+    border-radius: 1em 10px 1em;
+}
+button {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #07a;
+    color: #fff;
+    margin: 15px;
+    padding: 10px 15px;
+}
+button.cinza{
+    font-family: 'Roboto', sans-serif;
+    background-color: red;
+    color: #fff;
+}
+button.vermelho{
+    font-family: 'Roboto', sans-serif;
+    background-color: #a00;
+    color: #fff;
+}
+button:hover {
+    opacity: 0.8;
+}
+input{
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+.label>div {
+    display: flex;
+}
+.label>div>input {
+    flex: 1;
+}
+#footer {
+    background-color: green;
+    color: #fff;
+}
