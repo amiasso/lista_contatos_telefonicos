@@ -6,8 +6,6 @@ var listaRegistro = {
     usuario:[]
 }
 
-
-
 function gravaBd(){
     localStorage.setItem(KEY_BD,JSON.stringify(listaRegistro) )
 }
@@ -59,9 +57,9 @@ function desenhar(){
 
 function insertUsuario(nome, fone){
     const id = listaRegistro.ultimoIdGerado + 1;
-    listaRegistro.ultimoIdGerado =id ;
+    listaRegistro.ultimoIdGerado = id ;
     listaRegistro.usuario.push({
-        id, nome, fone
+        id, nome,fone
     })
     gravaBd()
     desenhar()
@@ -76,16 +74,20 @@ function editUsuario(id, nome, fone){
     desenhar()
     vizualizar('lista')   
 }
+
 function deleteUsuario(id){
     listaRegistro.usuario = listaRegistro.usuario.filter(usuario =>{
         return usuario.id != id 
     })
     gravaBd()
     desenhar()
+    
 }
+
 function perguntaSeDeleta(id){
-    if(confirm('quer deletar o registro de id ' +id)){
-        deleteUsuario(id)
+    if(confirm('quer deletar o registro de id ' + id)){
+        deleteUsuario(id) 
+
     }
 }
 
